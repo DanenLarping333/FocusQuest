@@ -1,0 +1,14 @@
+const assert=require('node:assert/strict');
+const C=require('./core.js');
+assert.equal(C.remaining(10000,7300),3);
+assert.equal(C.remaining(10000,11000),0);
+assert.equal(C.format(1500),'25:00');
+assert.equal(C.format(0),'00:00');
+assert.equal(C.next('focus',4),'long');
+assert.equal(C.next('focus',3),'short');
+assert.equal(C.next('focus',0),'short');
+assert.equal(C.next('long',4),'focus');
+assert.deepEqual(C.cleanSettings({focus:-1,short:999,long:'20',sound:false}),{...C.defaults,sound:false});
+assert.equal(C.cleanSettings({focus:180}).focus,180);
+assert.equal(C.dayKey(new Date(2026,0,2,23,59)),'2026-01-02');
+console.log('11 core checks passed: timer accuracy, expiry, formatting, break cycle, settings validation and local dates.');
