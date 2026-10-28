@@ -2,6 +2,8 @@
 
 **One thing at a time.** A lightweight, public-friendly focus timer with tasks and a seven-day activity view. Built with plain HTML, CSS and JavaScript; no account, API key, package installation or build step.
 
+Link:https://danenlarping333.github.io/FocusQuest/
+
 ## Features
 
 - Configurable focus, short break and long break timers (25 / 5 / 15 minutes by default).
